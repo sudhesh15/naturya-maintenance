@@ -1630,3 +1630,7 @@ section {
 .btn-whatsApp i{
   font-size: 25px;
 }
+
+.sub-heading{
+  font-weight: bold !important;
+}
