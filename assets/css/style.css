@@ -1652,4 +1652,8 @@ tr:nth-child(even) {
 .click {
   font-weight: 600;
   color:#00664b;
- }
+}
+
+table {
+  margin: 0px 10px 0px 10px;
+}
