@@ -25,21 +25,75 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <style>
-    .button-container {
+    .download-section {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 20vh;
+      padding: 0 16px;
+      text-align: center;
     }
 
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
+    .download-heading {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    .download-button {
       background-color: #278F06;
-      color: #fff;
-      font-weight: bold;
-      border-color: #fff;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border: 2px solid #278F06;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      justify-content: center;
+    }
+
+    .download-button:hover {
+      background-color: #1E7505;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .download-button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .download-icon {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    /* Mobile specific styles */
+    @media (max-width: 480px) {
+      .download-heading {
+        font-size: 18px;
+        line-height: 1.3;
+      }
+      
+      .download-button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+      
+      .download-icon {
+        width: 18px;
+        height: 18px;
+      }
     }
 
   </style>
@@ -61,20 +115,29 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+            <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="about-us.html#about-naturya">About Naturya</a></li>
+                  <li><a href="about-us.html#leadership">Leadership Team</a></li>
+                  <li><a href="about-us.html#farmer-partners">Our Farmer Partners</a></li>
+                  <li><a href="about-us.html#our-distributors">Our Distributors</a></li>
+                  <li><a href="about-us.html#our-clients">Our Clients</a></li>
+              </ul>
+            </li>
             <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="batter.html">BATTERS</a></li>
                 <li><a href="masala.html">WET MASALA</a></li>
-                <li><a href="squash.html">SQUASH</a></li>
+                
                 <li><a href="coconut-products.html">COCONUT PRODUCTS</a></li>
                 <li><a href="masala-powder.html">MASALA POWDER</a></li>
                 <!--<li><a href="other-products.html">OTHER PRODUCTS</a></li>-->
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="process.html">PROCESS</a></li>
+            <li><a class="nav-link scrollto" href="contract-manufacturing.html">CONTRACT MANUFACTURING</a></li>
             <li><a class="nav-link scrollto" href="distribution.html">DISTRIBUTION</a></li>
             <!--<li><a class="nav-link scrollto " href="career.html">CAREER</a></li>-->
-            <li><a class="nav-link scrollto" href="videos.html">VIDEOS</a></li>
+            <li><a class="nav-link scrollto" href="exports.html">EXPORTS</a></li>
             <li><a class="nav-link scrollto" href="contact.html">CONTACT</a></li>
             <li><a class="nav-link scrollto" href="horeca.html">HORECA</a></li>
           </ul>
@@ -125,20 +188,6 @@
               <div class="col-md-3 col-sm-6">
                 <div class="product-grid">
                     <div class="product-image">
-                      <a href="./product-details/frozen-grated-coconut.html">
-                        <img class="pic-1" src="assets/img/product-images/coconut-produts/2.png">
-                      </a>
-                    </div>
-                    <a href="./product-details/frozen-grated-coconut.html">
-                      <div class="product-content">
-                        <h3 class="title">Fresh Frozen Grated Coconut (Without Skin)</h3>
-                      </div>
-                    </a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="product-grid">
-                    <div class="product-image">
                       <a href="./product-details/frozen-grated-coconut-retail.html">
                         <img class="pic-1" src="assets/img/product-images/coconut-produts/7.png">
                       </a>
@@ -160,20 +209,6 @@
                     <a href="./product-details/brown-broken-Coconut-shells.html">
                       <div class="product-content">
                         <h3 class="title">Brown Broken Coconut Shells</h3>
-                      </div>
-                    </a>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
-                <div class="product-grid">
-                    <div class="product-image">
-                      <a href="./product-details/semi-husked-mature-coconut.html">
-                        <img class="pic-1" src="assets/img/product-images/coconut-produts/4.png">
-                      </a>
-                    </div>
-                    <a href="./product-details/semi-husked-mature-coconut.html">
-                      <div class="product-content">
-                        <h3 class="title">Semi Husked Mature Coconut</h3>
                       </div>
                     </a>
                 </div>
@@ -209,11 +244,17 @@
           </div>
         </div>
       </div>
-      <div class="button-container">
-        <a href="/assets/pdf/NATURYA_Grated Coco Brochure.pdf" download>
-          <button >Download Our Complete Coconut Product Brochure</button>
+      <div class="download-section">
+        <h2 class="download-heading">Our Complete Coconut Product Brochure</h2>
+        <a href="/assets/pdf/NATURYA_Grated Coco Brochure.pdf" download style="text-decoration: none;">
+          <button class="download-button">
+            Download
+            <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+          </button>
         </a>
-    </div>    
+      </div> 
     </section>
 
   </main><!-- End #main -->
@@ -231,10 +272,10 @@
               Kelarkalabettu, Udupi<br>
               Karnataka, 576105 <br><br>
               <strong>HOTLINE :</strong> +91-8971465456<br>
-              <strong>OFFICE :</strong> 0820 2010175<br>
+              
               <strong>Email:</strong> info@naturyafoods.com<br><br>
 
-              <strong>Naturya HoReCa Distributor, Mumbai:</strong> ST Enterprises, Sion, Mumbai<br>
+              
               <!--<strong>Phone :</strong> +91-92222 20865<br>-->
             </p>
           </div>
@@ -243,10 +284,11 @@
             <h4>QUICK LINKS</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="process.html">Process</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contract-manufacturing.html">Contract Manufacturing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="distribution.html">Distribution</a></li>
               <!--<li><i class="bx bx-chevron-right"></i> <a href="career.html">Career</a></li>-->
-              <li><i class="bx bx-chevron-right"></i> <a href="videos.html">Video</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="exports.html">Exports</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="horeca.html">Horeca</a></li>
             </ul>
@@ -257,7 +299,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="batter.html">Batters</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="masala.html">Wet Masala</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="squash.html">Squash</a></li>
+              
               <li><i class="bx bx-chevron-right"></i> <a href="coconut-products.html">Coconut Products</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="masala-powder.html">Masala Powder</a></li>
               <!--<li><i class="bx bx-chevron-right"></i> <a href="other-products.html">Other Products</a></li>-->

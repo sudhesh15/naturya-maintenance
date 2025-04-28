@@ -70,11 +70,12 @@ h6 {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  transition: all 0.5s;
 }
 
 #header .header-container {
   background: #fff;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #header.header-scrolled {
@@ -86,6 +87,7 @@ h6 {
 #header .logo {
   overflow: hidden;
   padding: 16px 30px 12px 30px;
+  margin: 0;
 }
 
 #header .logo h1 {
@@ -365,14 +367,16 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
-  background: url("../img/horeca-bg.webp") center center;
+  height: 100vh;
+  background: url("../img/horeca-bg.jpg") center center;
   background-size: cover;
   position: relative;
 }
 
 #hero .container {
   padding-top: 80px;
+  position: relative;
+  z-index: 2; /* This places the container above the overlay */
 }
 
 #hero:before {
@@ -383,6 +387,7 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1; 
 }
 
 #hero h1 {
@@ -393,14 +398,13 @@ h6 {
   color: #fff;
 }
 
-#hero h2 {
+#hero p {
   color: #fff;
   margin-bottom: 40px;
   font-size: 15px;
   font-weight: 500;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
 
 #hero .btn-get-started {
@@ -453,7 +457,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f6f6f7;
+  background-color: #e6f7f2;
 }
 
 .section-title {
@@ -484,26 +488,10 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Clients
---------------------------------------------------------------*/
-.clients {
-  background: #f6f6f7;
-  text-align: center;
-  padding: 5px 0;
-}
-
-.clients img {
-  width: 40%;
-  filter: grayscale(100);
-  transition: all 0.4s ease-in-out;
-  display: inline-block;
-  padding: 15px 0;
-}
-
-.clients img:hover {
-  filter: none;
-  transform: scale(1.1);
+@media only screen and (max-width: 600px) {
+  .section-title h2 {
+    font-size: 24px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -543,6 +531,78 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+/* Added styles for IndiaMART section */
+.indiamart-btn {
+  background-color: #F6F6F7;
+  color: #009970;
+  border: 1px solid #009970;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.indiamart-btn:hover {
+  background-color: #008060;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.indiamart-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.indiamart-image:hover{
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.tick-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.tick-list li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.tick-list li i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+.product-features {
+  padding: 0px;
+  border-radius: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .col-lg-8, .col-lg-4 {
+    margin-bottom: 20px;
+  }
+  
+  .indiamart-image {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .tick-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -625,7 +685,7 @@ section {
 .why-us .icon-boxes .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
-  margin: 0 0 30px 0;
+  margin: 0 0 15px 0;
 }
 
 .why-us .icon-boxes .icon-box p {
@@ -1027,6 +1087,7 @@ section {
   font-weight: bold;
   margin: 10px 0 5px 0;
   color: #111;
+  padding-bottom: 20px;
 }
 
 .testimonials .testimonial-item h4 {
@@ -1079,9 +1140,6 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team {
-  background: #fff;
-}
 
 .team .member {
   position: relative;
@@ -1558,105 +1616,91 @@ section {
   top: 10px;
   left: 10px;
 }
-.carousel .carousel-item {
-  height: 750px;
+
+
+.carousel-item {
+  height: 100vh;
+  position: relative;
 }
 
-.carousel-item .img-1 {
-  position: absolute;
+.carousel-img {
   width: 100%;
   height: 100%;
-  background: url(../img/bg/1.png) top no-repeat;
-  background-size: cover;
-}   
-
-.carousel-item .img-2 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(../img/bg/2.png) top no-repeat;
-  background-size: cover;
-}  
-
-.carousel-item .img-3 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(../img/bg/3.png) top no-repeat;
-  background-size: cover;
-}  
-
-.carousel-item .img-4 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url(../img/bg/4.png) top no-repeat;
-  background-size: cover;
-}  
-
-
-@media (max-width: 768px) {
-  #header-carousel .carousel-item {
-      position: relative;
-      min-height: 450px;
-  }
-  
-  #header-carousel .carousel-item .img-1 {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url(../img/bg/m-1.png) top no-repeat;
-      background-size: cover;
-  }
-
-  #header-carousel .carousel-item .img-2 {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url(../img/bg/m-2.png) top no-repeat;
-      background-size: cover;
-  }
-
-  #header-carousel .carousel-item .img-3 {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url(../img/bg/m-3.png) top no-repeat;
-      background-size: cover;
-  }
-
-  #header-carousel .carousel-item .img-4 {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url(../img/bg/m-4.png) top no-repeat;
-      background-size: cover;
-  }
+  object-fit: cover;
+  object-position: center;
 }
 
-@media(max-width:500px){
-  #carouselExampleIndicators{
-    margin-top:100px;
-  }
-  .carousel-control-prev,
-  .carousel-control-next {
-     display: none;
-  }
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark opacity overlay */
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 15%;
+.carousel-caption {
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
-    background-color: #009970;
-    border: 10px solid #009970;
-    border-radius: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #009970;
+  border: 10px solid #009970;
+  border-radius: 3rem;
 }
+
+
+@media (max-width: 768px) {
+  .carousel-caption {
+      text-align: left;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  
+  .carousel-caption h1 {
+      font-size: 2.4rem;
+      margin-left: 0;
+      text-align: left;
+      text-wrap: normal;
+  }
+  
+  .carousel-caption p {
+      font-size: 1.2rem;
+      margin-left: 0;
+      text-align: left;
+      justify-content: center;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      width: 2rem;
+      height: 2rem;
+      border-width: 5px;
+  }
+}
+
 
 .btn-amazon{
   background: #FA8900;
@@ -1724,4 +1768,216 @@ tr:nth-child(even) {
 .click {
   font-weight: 550;
   color:#00664b;
+}
+
+.read-more-btn {
+  background-color: #009970;
+  color: #fff;
+  border: 1px solid #009970;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #fff;
+  color: #008060;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Leadership Team Cards CSS - Revision */
+.team .member {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.team .member .member-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: none; /* Remove any transitions */
+}
+
+.team .member .member-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: none; /* Remove any transitions */
+}
+
+/* Specifically disable hover effects */
+.team .member:hover .member-img {
+  transform: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team .member:hover .member-img img {
+  transform: none;
+  filter: none;
+}
+
+.team .member .member-info {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.name-with-linkedin {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.linkedin-button-new {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:  #278F06; /* LinkedIn blue color */
+  font-size: 18px;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+  border: 1px solid  #278F06;
+  font-weight: 700;
+  margin: -5px 0px 0px 0px;
+}
+
+.linkedin-button-new:hover {
+  background-color:  #278F06;
+  color: #fff;
+}
+
+.team .team-heading {
+  font-size: 18px;
+  color: #0b5394;
+  font-weight: 600;
+  margin: 0 5px 0 0;
+}
+
+.team .team-sub-heading {
+  font-size: 15px;
+  color: #666;
+  font-style: italic;
+}
+
+.team .read-more {
+  display: block;
+  color: #0b5394;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.team .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Remove card styling */
+.team .row .member {
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Override any container card styling */
+.team .container .row .col-lg-4,
+.team .container .row .col-md-6 {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Light background for the section */
+.light-background {
+  background-color: rgba(240, 240, 240, 0.3);
+  padding: 60px 0;
+}
+
+/* Row spacing adjustments */
+.team .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.client-logo {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  border: 1px solid  #66A543;
+  background-color: #F9FAFB;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.client-logo img {
+  max-width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .client-section {
+      padding: 50px 0;
+  }
+  
+  .client-logo {
+      height: 100px;
+      margin-bottom: 20px;
+  }
+}
+
+.distributor-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.distributor-list li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #009970;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.distributor-list li:hover {
+  background-color: #e9ecef;
+  transform: translateX(5px);
+}
+
+#our-distributors h3 {
+  margin-bottom: 25px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .distributor-list {
+      margin-top: 30px;
+      text-align: center;
+  }
 }

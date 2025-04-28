@@ -28,7 +28,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -67,20 +67,29 @@
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+            <li class="dropdown"><a href="#"><span>About Us</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="about-us.html#about-naturya">About Naturya</a></li>
+                  <li><a href="about-us.html#leadership">Leadership Team</a></li>
+                  <li><a href="about-us.html#farmer-partners">Our Farmer Partners</a></li>
+                  <li><a href="about-us.html#our-distributors">Our Distributors</a></li>
+                  <li><a href="about-us.html#our-clients">Our Clients</a></li>
+              </ul>
+            </li>
             <li class="dropdown"><a href="#"><span>Products</span> <i class="bi bi-chevron-down"></i></a>
               <ul>
                 <li><a href="batter.html">BATTERS</a></li>
                 <li><a href="masala.html">WET MASALA</a></li>
-                <li><a href="squash.html">SQUASH</a></li>
+                
                 <li><a href="coconut-products.html">COCONUT PRODUCTS</a></li>
                 <li><a href="masala-powder.html">MASALA POWDER</a></li>
                 <!--<li><a href="other-products.html">OTHER PRODUCTS</a></li>-->
               </ul>
             </li>
-            <li><a class="nav-link scrollto" href="process.html">PROCESS</a></li>
+            <li><a class="nav-link scrollto" href="contract-manufacturing.html">CONTRACT MANUFACTURING</a></li>
             <li><a class="nav-link scrollto" href="distribution.html">DISTRIBUTION</a></li>
             <!--<li><a class="nav-link scrollto " href="career.html">CAREER</a></li>-->
-            <li><a class="nav-link scrollto" href="videos.html">VIDEOS</a></li>
+            <li><a class="nav-link scrollto" href="exports.html">EXPORTS</a></li>
             <li><a class="nav-link scrollto" href="contact.html">CONTACT</a></li>
             <li><a class="nav-link scrollto" href="horeca.html">HORECA &nbsp;&nbsp;</a></li>
           </ul>
@@ -95,62 +104,75 @@
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="w-100 img-3">
+                <img src="assets/img/hero/1.jpg" class="carousel-img" alt="Hero Image 1">
+                <div class="carousel-overlay"></div>
                 <div class="carousel-caption">
                     <div class="container">
+                        <h1>Freshness Preserved</h1>
+                        <p>Bring the vibrant taste of fresh Udupi coconut to your kitchen with Naturya — 100% natural, rich in flavor and milk, with no preservatives or additives.</p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100 img-2">
+              <img src="assets/img/hero/6.jpg" class="carousel-img" alt="Hero Image 3">
+              <div class="carousel-overlay"></div>
+              <div class="carousel-caption">
+                  <div class="container">
+                      <h1>Global Reach</h1>
+                      <p>Naturya Fresh Foods delivers premium coconut-based and South Indian specialty products globally, offering 100% natural quality, tailored export solutions, and seamless farm-to-port logistics you can trust.</p>
+                  </div>
+              </div>
+          </div>
+            <div class="carousel-item">
+                <img src="assets/img/hero/2.jpg" class="carousel-img" alt="Hero Image 2">
+                <div class="carousel-overlay"></div>
                 <div class="carousel-caption">
                     <div class="container">
+                        <h1>Empowering Farmers</h1>
+                        <p>By partnering directly with farmers, Naturya delivers fresh, nutrient-rich coconuts — bringing authentic flavors to your table while supporting sustainable farming.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="w-100 img-1">
+                <img src="assets/img/hero/7.jpg" class="carousel-img" alt="Hero Image 4">
+                <div class="carousel-overlay"></div>
                 <div class="carousel-caption">
                     <div class="container">
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="w-100 img-4">
-                <div class="carousel-caption">
-                    <div class="container">
+                        <h1>Freshly Made Easy</h1>
+                        <p>Skip the prep and dive straight into deliciousness — Naturya’s 1Kg Idli Dosa Batter offers quick, consistent results for soft idlis and golden dosas, anytime you crave them.</p>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-            data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-            data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
     </div>
 </div>
-  
  
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about">
+    <section id="about" class="about section-bg">
       <div class="container">
         <div class="row">
           <div class="section-title" data-aos="fade-right">
             <h2>About US</h2>
           </div>
-          <div class="col-lg-12">
+          <div class="col-lg-12 mb-4">
             <p class="mb-2" style="text-align: justify;"><b>NATURYA</b> is a rapidly-growing, ISO 9001:2015 Certified Manufacturer and Wholesale Distributor of Fresh Foods based out of Udupi, Karnataka, India. We cater to both, Retail and Hospitality industry (HoReCa). Naturya is committed to delivering high-quality, fresh and flavourful food products to consumers worldwide. We take pride in offering only 100% natural, preservative-free and additive-free foods. Our product range is wide, varied and ever growing. See photos to know more. Naturya ranks high on product quality, innovation, integrity, customer focus, sustainability and excellence. Call us if you’re looking for a profitable business within or outside India. We are currently offering distributorship for select products.</p>
             <p class="mb-0" style="text-align: justify;"><b>We have PAN India distribution.</b></p>
           </div>
+          <a href="about-us.html">
+            <button class="read-more-btn">READ MORE</button>
+          </a>
         </div>
       </div>
     </section><!-- End About Section -->
@@ -161,16 +183,19 @@
           <div class="section-title" data-aos="fade-right">
             <h2>WE ARE ON INDIA MART</h2>
           </div>
-          <div class="col-lg-8">
-           <p class="mb-0" style="text-align: justify;">Explore our offerings on IndiaMART, where we bring you a wide range of products to meet your needs. Visit our IndiaMART page to learn more and connect with us for seamless business transactions</p><br/>
-           <a href="https://IndiaMART.in/alZPWEKd" target="_blank">
-            <button >CLICK HERE</button>
-           </a>
+          <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-center">
+            <img src="assets/img/india-mart.png" alt="IndiaMART Logo" class="img-fluid indiamart-image">
           </div>
-            <div class="col-lg-4">
-              <!-- <img src="assets//img/indiaMart.png" alt="" class="img-fluid"></a> -->
-            </div>
+          
+          <div class="col-lg-7 col-md-7">
+            <p class="mb-0" style="text-align: justify;">Explore our offerings on IndiaMART, where we bring you a wide range of products to meet your needs. Visit our IndiaMART page to learn more and connect with us for seamless business transactions.</p><br/>
+            <p class="mb-0" style="text-align: justify;">Whether you're looking for quality, affordability, or bulk purchasing options, our IndiaMART catalog is designed to cater to businesses of all sizes. With detailed product descriptions, transparent pricing, and prompt customer support, we make it easy for you to find exactly what you need and place your orders with confidence.</p><br/>
+            <a href="https://www.indiamart.com/arushiankemmannufoodsbeverages/" target="_blank">
+              <button class="read-more-btn">CLICK HERE</button>
+            </a>
           </div>
+          
+          
         </div>
       </div>
     </section><!-- End About Section -->
@@ -192,8 +217,8 @@
           </div>
 
           <div class="col-lg-3 col-6 text-center">
-            <span>50 +</span>
-            <p>Products</p>
+            <span>4 +</span>
+            <p>Countries We Export to</p>
           </div>
 
           <div class="col-lg-3 col-6 text-center">
@@ -205,8 +230,28 @@
       </div>
     </section><!-- End Counts Section -->
 
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="section-title" data-aos="fade-right">
+            <h2>From Udupi to the World</h2>
+          </div>
+          <div class="col-lg-7 col-md-7">
+            <p class="mb-0" style="text-align: justify;">Naturya Grated Coconut brings you the authentic taste of Udupi, now reaching kitchens around the globe. Sourced from the finest coconuts and processed with care, our product captures the rich, traditional flavours of South India. Whether you're a chef, a homemaker, or a food enthusiast, experience the purity and freshness of Naturya — now proudly exported worldwide.</p><br/>
+            <p class="mb-0" style="text-align: justify;">Our premium grated coconuts are now being exported to the Maldives, USA, and across Europe — delivering freshness and tradition straight from India to global kitchens.</p><br/>
+            <a href="exports.html">
+              <button class="read-more-btn">CLICK HERE</button>
+            </a>
+          </div>
+          <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-center">
+            <img src="assets/img/export.png" alt="" class="img-fluid indiamart-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us">
+    <section id="why-us" class="why-us section-bg">
       <div class="container">
 
         <div class="row">
@@ -250,6 +295,42 @@
       </div>
     </section><!-- End Why Us Section -->
 
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Our Premium Grated Coconut</h2>
+          </div>
+          <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-center">
+            <img src="assets/img//grated-coconut.png" alt="IndiaMART Logo" class="img-fluid indiamart-image">
+          </div>
+          <div class="col-lg-7 col-md-7">
+            <p class="mb-0" style="text-align: justify;">Bring the taste of fresh coconut straight to your kitchen with Naturya Food Products (India)'s Fresh Frozen Grated Coconut. Made from 100% natural coconuts with no added preservatives, it's a must-have for chefs, HoReCa professionals, and home cooks. Whether it's a traditional recipe or a global creation, enjoy authentic taste and unmatched freshness in every bite.</p><br/>
+            
+            <div class="product-features">
+              <ul class="tick-list">
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> 100% Natural</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> No preservatives</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> No additives</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> Juicy & flavourful</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> Rich in taste & aroma</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> Rich in milk content</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> Udupi coconuts only</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> Only white is grated</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> Frozen when fresh</li>
+                <li><i class="fas fa-check-circle" style="color: #009970;"></i> Coconut pulp available</li>
+              </ul>
+            </div>
+            
+            <p class="mb-3 mt-4">From the heart of Udupi - Premium quality grated coconut for all your culinary needs.</p>
+            <a href="product-details/frozen-grated-coconut-retail.html">
+              <button class="read-more-btn">CLICK HERE</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
@@ -262,6 +343,26 @@
 
       </div>
     </section><!-- End Cta Section -->
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="section-title" data-aos="fade-right">
+            <h2>Contract Manufacturing and Services</h2>
+          </div>
+          <div class="col-lg-7 col-md-7">
+            <p class="mb-0" style="text-align: justify;">Are you an international brand looking for reliable contract manufacturing of fresh frozen grated coconut? Naturya Food Products (India) is your trusted partner — a leading manufacturer and exporter of premium grated, shredded, and sliced coconut. With a focus on quality and consistency, we deliver products that meet global standards. Partner with us to bring the authentic taste of India to your brand.</p><br/>
+            <p class="mb-0" style="text-align: justify;">From sourcing to packaging, we offer end-to-end solutions tailored to your brand’s needs — ensuring quality, reliability, and timely delivery across the globe.</p><br/>
+            <a href="contract-manufacturing.html">
+              <button class="read-more-btn">CLICK HERE</button>
+            </a>
+          </div>
+          <div class="col-lg-5 col-md-5 d-flex align-items-center justify-content-center">
+            <img src="assets/img/private-label.png" alt="IndiaMART Logo" class="img-fluid indiamart-image">
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
@@ -298,6 +399,60 @@
               </div>
 
             </div>
+            <br/>
+            <div class="row">
+              <div class="col-md-4 d-flex align-items-stretch">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon mb-4"><img src="./assets/img/certificates/4.png" width="180%" height="180%"></div>
+                  <h4>MSME</h4>
+                  <p>We're a proud MSME-registered business, committed to driving innovation and playing our part in supporting India’s growing economy.</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon mb-4"><img src="./assets/img/certificates/5.png" width="180%" height="180%"></div>
+                  <h4>IEC</h4>
+                  <p>With an official Importer Exporter Code (IEC), we’re fully equipped to carry out international trade smoothly and responsibly.</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon mb-4"><img src="./assets/img/certificates/6.png" width="180%" height="180%"></div>
+                  <h4>APEDA Registered</h4>
+                  <p>Being registered with APEDA means our food products meet high-quality standards, making them ready for global markets with complete traceability and trust.</p>
+                </div>
+              </div>
+
+            </div>
+            <br/>
+            <div class="row">
+              <div class="col-md-4 d-flex align-items-stretch">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon mb-4"><img src="./assets/img/certificates/7.png" width="180%" height="180%"></div>
+                  <h4>ICEGATE</h4>
+                  <p>Our ICEGATE registration helps us handle customs and logistics efficiently, so we can ensure faster, hassle-free international shipping.</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon mb-4"><img src="./assets/img/certificates/8.png" width="180%" height="180%"></div>
+                  <h4>AdCode</h4>
+                  <p>Having an Ad Code allows us to process export payments seamlessly, making sure all our transactions are clear, secure, and compliant.</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon mb-4"><img src="./assets/img/certificates/9.png" width="180%" height="180%"></div>
+                  <h4>Coconut Development Board Registered</h4>
+                  <p>We’re registered with the Coconut Development Board, which helps us stay aligned with the best practices in coconut farming and product development.</p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -327,7 +482,7 @@
                     <div class="product-grid">
                         <div class="product-image">
                             <a href="./product-details/idli-dosa-batter.html" class="image">
-                                <img class="pic-1" src="assets/img/product-images/home-products/1.png">
+                                <img class="pic-1" src="assets/img/best-seller-2.png">
                             </a>
                         </div>
                         <a href="./product-details/idli-dosa-batter.html">
@@ -338,24 +493,10 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6">
-                    <div class="product-grid">
-                        <div class="product-image">
-                            <a href="./masala.html" class="image">
-                              <img class="pic-1" src="assets/img/product-images/home-products/2.png">
-                            </a>
-                        </div>
-                        <a href="./masala.html">
-                          <div class="product-content">
-                            <h3 class="title">All Wet Masala Paste</h3>
-                          </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
                   <div class="product-grid">
                       <div class="product-image">
                           <a href="./product-details/frozen-grated-coconut-retail.html" class="image">
-                            <img class="pic-1" src="assets/img/product-images/home-products/3.png">
+                            <img class="pic-1" src="assets/img/best-seller-1.png">
                           </a>
                       </div>
                       <a href="./product-details/frozen-grated-coconut-retail.html">
@@ -389,10 +530,10 @@
                   <div class="testimonial-item">
                     <p>
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      I have bought this batter and made Idlis, taste was nothing less than homemade idli batter. We can save lots of time from this, Those who want to prepare healthy and quick breakfast, just go for it...... Totally it is worth buying.
+                      I recently tried Naturya Grated Coconut, and it’s quickly become a staple in my kitchen. The coconut is finely grated and has a fresh, natural taste that works perfectly in everything from curries to desserts. I love that it’s organic and free from any additives, so I know I’m getting a pure product. It’s super convenient to use, and the flavor really stands out.
                       <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
-                    <h3>~ Hegde Asha</h3>
+                    <h3>~ Shradha Agarwal</h3>
                   </div>
                 </div><!-- End testimonial item -->
 
@@ -400,10 +541,10 @@
                   <div class="testimonial-item">
                     <p>
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      Highly recommended natural food brand in the region . Must try the idly batter. Can’t get better than that. Clean packaging and facility. Very tasty, Very affordable
+                      Naturya Grated Coconut is a fantastic addition to my pantry. The texture is perfect—soft and finely grated, making it incredibly versatile for cooking and baking. The flavor is naturally sweet and fresh, without any artificial aftertaste, which is a testament to its quality.
                       <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
-                    <h3>~ Anil Dsouza</h3>
+                    <h3>~ Astha</h3>
                   </div>
                 </div><!-- End testimonial item -->
 
@@ -411,10 +552,30 @@
                   <div class="testimonial-item">
                     <p>
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                      I have visited the place and reviewed the food production with cleanliness and maintained good quality.And all the products are good....Idli is delicious….
+                      As a chef running a busy restaurant, quality and consistency are non-negotiable, and Naturya Grated Coconut has exceeded my expectations. Its fresh, natural flavor and perfectly grated texture make it incredibly versatile for a variety of dishes.
                       <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                     </p>
-                    <h3>~ James Sadrik</h3>
+                    <h3>~ Hemsworth</h3>
+                  </div>
+                </div><!-- End testimonial item --><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      Incredible! Whether it’s Naturya's grated coconut, coconut chunks, or other superfoods, the attention to detail in ensuring freshness and purity is evident. Their products elevate the flavors of any dish, whether you’re a professional chef, a home cook, or simply looking for healthy snacking options.
+                    </p>
+                    <h3>~ Surabhi Datta</h3>
+                  </div>
+                </div><!-- End testimonial item --><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                      I was earlier using desiccated coconut powder for my bakery products baking. When I enquired NATURYA when I came across their ad, NATURYA person advised me to try using fresh coconut by dry roasting it instead of desiccated powder. Now my baked products taste totally different and so fresh and rich. I have more customer start liking my products.
+                    </p>
+                    <h3>~ Shailesh K</h3>
                   </div>
                 </div><!-- End testimonial item --><!-- End testimonial item -->
 
@@ -443,10 +604,10 @@
               Kelarkalabettu, Udupi<br>
               Karnataka, 576105 <br><br>
               <strong>HOTLINE :</strong> +91-8971465456<br>
-              <strong>OFFICE :</strong> 0820 2010175<br>
+              
               <strong>Email:</strong> info@naturyafoods.com<br><br>
 
-              <strong>Naturya HoReCa Distributor, Mumbai:</strong> ST Enterprises, Sion, Mumbai<br>
+              
               <!--<strong>Phone :</strong> +91-92222 20865<br>-->
             </p>
           </div>
@@ -455,10 +616,11 @@
             <h4>QUICK LINKS</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="process.html">Process</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="contract-manufacturing.html">Contract Manufacturing</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="distribution.html">Distribution</a></li>
               <!--<li><i class="bx bx-chevron-right"></i> <a href="career.html">Career</a></li>-->
-              <li><i class="bx bx-chevron-right"></i> <a href="videos.html">Video</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="exports.html">Exports</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="horeca.html">Horeca</a></li>
             </ul>
@@ -469,7 +631,7 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="batter.html">Batters</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="masala.html">Wet Masala</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="squash.html">Squash</a></li>
+              
               <li><i class="bx bx-chevron-right"></i> <a href="coconut-products.html">Coconut Products</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="masala-powder.html">Masala Powder</a></li>
               <!--<li><i class="bx bx-chevron-right"></i> <a href="other-products.html">Other Products</a></li>-->
